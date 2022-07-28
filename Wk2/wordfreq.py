@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import sys
-import string
+import sys, string, os
 
-words = sys.stdin.read().split()
+words = open("text.txt").read().split()
+
 d = dict()
 for word in words:
 	t = word.translate(str.maketrans('','',string.punctuation)).upper()
